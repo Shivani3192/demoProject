@@ -1,0 +1,42 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:5462487459646576306",
+      "lastPropertyId": "4:4228213009533888675",
+      "name": "LikeDislikeCounter",
+      "properties": [
+        {
+          "id": "1:477595705705800452",
+          "name": "id"
+        },
+        {
+          "id": "2:1871759115138463504",
+          "name": "countOfLike"
+        },
+        {
+          "id": "3:9206502867751272817",
+          "name": "countOfDisLike"
+        },
+        {
+          "id": "4:4228213009533888675",
+          "name": "parentId"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:5462487459646576306",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

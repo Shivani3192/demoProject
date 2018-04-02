@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/size_5">
+
+    <EditText
+        android:id="@+id/search_video_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search"
+        android:layout_margin="@dimen/size_5"
+        android:drawableLeft="@drawable/ic_action_search"
+        android:drawablePadding="@dimen/size_5"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="@dimen/size_5"
+        android:maxLines="1"
+        android:inputType="text"
+        android:paddingRight="@dimen/size_5" />
+
+    <include layout="@layout/recycler_view" />
+</LinearLayout>

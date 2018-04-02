@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.objectbox'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.spatel.giphyexample"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+ext {
+    supportLibraryVersion = '27.1.0'
+    butterknifeLibraryVersion = '8.8.1'
+    conductoLibraryVersion = '2.1.4'
+    daggerLibraryVersion = '2.10'
+    glideLibraryVersion = '4.6.1'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support:design:$supportLibraryVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation('com.giphy.sdk:core:1.0.2@aar') {
+        transitive=true
+    }
+
+    // ButterKnife dependencies
+    implementation "com.jakewharton:butterknife:$butterknifeLibraryVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeLibraryVersion"
+
+    // Conductor dependencies
+    implementation "com.bluelinelabs:conductor:$conductoLibraryVersion"
+    implementation "com.bluelinelabs:conductor-support:$conductoLibraryVersion"
+
+    // Dagger dependencies
+    implementation "com.google.dagger:dagger:$daggerLibraryVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerLibraryVersion"
+
+    // Glide dependencies
+    implementation "com.github.bumptech.glide:glide:$glideLibraryVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideLibraryVersion"
+
+    // Rxjava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.12'
+
+    //ExoPlayer
+    implementation 'com.google.android.exoplayer:exoplayer:r2.5.2'
+}
